@@ -62,7 +62,7 @@ function subWoodGatherer(incrementLevel)
 //king functions
 function assignKingFood()
 {
-    if(kingOfFood == false)
+    if(kingOfFood == false && kingOfWood == false)
     {
         foodGatherers++;
         foodMultiplier += kingMultplier;
@@ -73,7 +73,7 @@ function assignKingFood()
 
 function assignKingWood()
 {
-    if(kingOfWood == false)
+    if(kingOfWood == false && kingOfFood == false)
     {
         woodGatherers++;
         woodMultiplier += kingMultplier;
@@ -101,7 +101,7 @@ function unassignKing()
 
 
 window.onload = function () {
-    setInterval(gatherResources, 100);
+    setInterval(gatherResources, 10);
 }
 
 function gatherResources()
