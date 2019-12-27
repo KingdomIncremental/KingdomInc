@@ -101,7 +101,7 @@ function unassignKing()
 
 
 window.onload = function () {
-    setInterval(gatherResources, 10);
+    setInterval(gatherResources, 1000);
 }
 
 function gatherResources()
