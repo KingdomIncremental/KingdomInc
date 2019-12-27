@@ -26,6 +26,7 @@ function assignFoodGatherer(incrementLevel)
         availableCitizens -= incrementLevel;
     }
     
+    document.getElementById("foodGathers").innerHTML = foodGatherers;
 }
 
 function assignWoodGatherer(incrementLevel)
@@ -35,6 +36,7 @@ function assignWoodGatherer(incrementLevel)
         woodGatherers += incrementLevel;
         availableCitizens -= incrementLevel;
     }
+    document.getElementById("woodGatherers").innerHTML = woodGatherers;
 }
 
 function assignKingFood()
@@ -75,6 +77,15 @@ window.onload = function () {
 
 function gatherResources()
 {
-    wood += woodGatherers * woodMultiplier;
+    gatherFood();
+    gatherWood();
+}
+
+function gatherFood(){
     food += foodGatherers * foodMultiplier;
+    document.getElementById("food").innerHTML = food;
+}
+function gatherWood(){
+    wood += woodGatherers * woodMultiplier;
+    document.getElementById("wood").innerHTML = wood;
 }
