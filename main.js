@@ -43,9 +43,10 @@ function assignKingFood()
 {
     if(kingOfFood == false)
     {
-        assignFoodGatherer(1);
+        foodGatherers++;
         foodMultiplier += kingMultplier;
         kingOfFood = true;
+        document.getElementById("foodGathers").innerHTML = foodGatherers;
     }
 }
 
@@ -53,9 +54,10 @@ function assignKingWood()
 {
     if(kingOfWood == false)
     {
-        assignWoodGatherer(1);
+        woodGatherers++;
         woodMultiplier += kingMultplier;
         kingOfWood = true;
+        document.getElementById("woodGatherers").innerHTML = woodGatherers;
     }
 }
 
