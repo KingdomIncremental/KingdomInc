@@ -17,19 +17,29 @@ var kingMultplier = .25;
 var kingOfWood = false;
 var kingOfFood = false; 
 
-
-function assignFoodGatherer(incrementLevel)
+//Food functions
+function addFoodGatherer(incrementLevel)
 {
     if(availableCitizens >= incrementLevel)
     {
         foodGatherers += incrementLevel;
         availableCitizens -= incrementLevel;
     }
-    
+    document.getElementById("foodGathers").innerHTML = foodGatherers;
+}
+function subFoodGatherer(incrementLevel)
+{
+    if(foodGatherers >= incrementLevel)
+    {
+        foodGatherers -= incrementLevel;
+        availableCitizens += incrementLevel;
+    }
     document.getElementById("foodGathers").innerHTML = foodGatherers;
 }
 
-function assignWoodGatherer(incrementLevel)
+
+//Wood functions
+function addWoodGatherer(incrementLevel)
 {
     if(availableCitizens >= incrementLevel)
     {
@@ -38,7 +48,18 @@ function assignWoodGatherer(incrementLevel)
     }
     document.getElementById("woodGatherers").innerHTML = woodGatherers;
 }
+function subWoodGatherer(incrementLevel)
+{
+    if(woodGatherers >= incrementLevel)
+    {
+        woodGatherers -= incrementLevel;
+        availableCitizens += incrementLevel;
+    }
+    document.getElementById("woodGatherers").innerHTML = woodGatherers;
+}
 
+
+//king functions
 function assignKingFood()
 {
     if(kingOfFood == false)

@@ -21,8 +21,11 @@
                 <section id="click-info">
                   <h2>Food:  <span id="food">0</span></h2>
                   <h3>Assigned Workers: <span id="foodGatherers">0</span></h3>
-                  <button onclick="assignFoodGatherer()">
-                      Add Worker (<span id="incrementLevel">1</span>)
+                  <button onclick="addFoodGatherer()">
+                      Add Worker(s) (<span id="addfood">1</span>)
+                  </button>
+                  <button onclick="subFoodGatherers()">
+                      Sub Worker(s) (<span id="subfood">1</span>)
                   </button>
                   <br/>
                   <br/>
@@ -37,9 +40,12 @@
                 <section id="passive-info">
                   <h2>Wood: <span id="wood">0</span></h2>
                   <h3>Assigned Workers: <span id="woodGatherers">0</span></h3>
-                  <button onclick="assignedWoodGather()">
-                      Upgrade Passive (<span id="incrementLevel">1</span>)
+                  <button onclick="addWoodGather()">
+                      Add Worker(s) (<span id="incrementLevel">1</span>)
                   </button>
+                  <button onclick="subWoodGather()">
+                     Sub Worker(s) (<span id="incrementLevel">1</span>)
+                </button>
                   <br/>
                   <br/>
                   <button onclick="assignKingWood()">
