@@ -31,3 +31,12 @@ function assignWoodGatherer(incrementLevel)
     }
 }
 
+window.onload = function () {
+    setInterval(gatherResources, 100);
+}
+
+function gatherResources()
+{
+    wood += woodGatherers;
+    food += foodGatherers;
+}
