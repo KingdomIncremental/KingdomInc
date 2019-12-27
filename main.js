@@ -41,16 +41,22 @@ function assignWoodGatherer(incrementLevel)
 
 function assignKingFood()
 {
-    foodGatherers++;
-    foodMultiplier += kingMultplier;
-    kingOfFood = true;
+    if(kingOfFood == false)
+    {
+        assignFoodGatherer(1);
+        foodMultiplier += kingMultplier;
+        kingOfFood = true;
+    }
 }
 
 function assignKingWood()
 {
-    woodGatherers++;
-    woodMultiplier += kingMultplier;
-    kingOfWood = true;
+    if(kingOfWood == false)
+    {
+        assignWoodGatherer(1);
+        woodMultiplier += kingMultplier;
+        kingOfWood = true;
+    }
 }
 
 function unassignKing()
